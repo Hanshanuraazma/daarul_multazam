@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { MapPin, Phone, Mail, Instagram, Facebook, Youtube } from 'lucide-react'
+import { MapPin, Phone, Mail } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -19,14 +19,14 @@ export default function Footer() {
               Mencetak generasi qurani yang mandiri, berakhlak mulia, dan berjiwa entrepreneur.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-emerald-700">
-                <Facebook size={24} />
+              <a href="#" className="text-gray-400 hover:text-emerald-700 font-semibold">
+                FB
               </a>
-              <a href="#" className="text-gray-400 hover:text-emerald-700">
-                <Instagram size={24} />
+              <a href="#" className="text-gray-400 hover:text-emerald-700 font-semibold">
+                IG
               </a>
-              <a href="#" className="text-gray-400 hover:text-emerald-700">
-                <Youtube size={24} />
+              <a href="#" className="text-gray-400 hover:text-emerald-700 font-semibold">
+                YT
               </a>
             </div>
           </div>
