@@ -9,7 +9,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Pondok Pesantren Daarul Multazam",
   description: "Mencetak Generasi Qurani yang Mandiri dan Berjiwa Entrepreneur",
-  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
