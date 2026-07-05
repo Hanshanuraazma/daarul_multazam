@@ -1,0 +1,71 @@
+==============================================
+ENVIRONMENT VARIABLES UNTUK VERCEL
+==============================================
+
+COPY-PASTE environment variables berikut ke Vercel Dashboard:
+Settings → Environment Variables → Add Variable
+
+PENTING: Set untuk semua environments:
+- ✅ Production
+- ✅ Preview  
+- ✅ Development
+
+==============================================
+
+Variable 1:
+-----------
+Name: NEXT_PUBLIC_SANITY_PROJECT_ID
+Value: 2h29rrzh
+
+
+Variable 2:
+-----------
+Name: NEXT_PUBLIC_SANITY_DATASET
+Value: production
+
+
+Variable 3:
+-----------
+Name: NEXT_PUBLIC_SANITY_API_VERSION
+Value: 2024-05-01
+
+
+Variable 4:
+-----------
+Name: NEXT_PUBLIC_SANITY_REGISTRATION_DATASET
+Value: registration
+
+
+Variable 5:
+-----------
+Name: SANITY_API_TOKEN
+Value: skDbiVIc3SNmcvy6eISu5JGD74d26cp3ce11YjUmWtabv7OmMe8BAnWVroiLJw0cbek33DdOZsvOxcAGGL0rMpeiNg2ehZbICqPRaHwIAq5rYUyjv2oap1wa7ioCkcgQZKhcesBcROdidwxc0Hb1fxlQSWjkPlS8DOYRJiEwp17PNtYAVhd0
+
+
+==============================================
+
+CARA SETTING DI VERCEL:
+
+1. Login ke https://vercel.com
+2. Pilih project "daarul-multazam"
+3. Go to Settings → Environment Variables
+4. Untuk setiap variable:
+   - Klik "Add Variable"
+   - Paste Name dan Value dari atas
+   - Centang: Production, Preview, Development
+   - Klik "Save"
+5. Ulangi untuk 5 variables
+
+==============================================
+
+SETELAH SET ENVIRONMENT VARIABLES:
+
+1. Go to Deployments tab
+2. Klik titik tiga (...) pada deployment terakhir
+3. Klik "Redeploy"
+4. WAJIB centang: "Clear cache and redeploy"
+5. Klik "Redeploy"
+6. Tunggu build selesai (2-3 menit)
+7. Done! Website live! 🚀
+
+==============================================
