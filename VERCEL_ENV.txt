@@ -1,0 +1,105 @@
+========================================
+VERCEL ENVIRONMENT VARIABLES
+Copy-paste untuk setiap variable
+========================================
+
+INSTRUKSI:
+1. Buka: https://vercel.com
+2. Pilih project: daarul-multazam
+3. Go to: Settings → Environment Variables
+4. Untuk SETIAP variable di bawah:
+   - Klik "Add" atau "New"
+   - Copy NAME (tanpa "Name:")
+   - Paste ke field "Key" atau "Name"
+   - Copy VALUE (tanpa "Value:")
+   - Paste ke field "Value"
+   - CENTANG: Production, Preview, Development
+   - Klik "Save"
+
+========================================
+
+VARIABLE 1 of 5
+---------------
+Name: NEXT_PUBLIC_SANITY_PROJECT_ID
+Value: 2h29rrzh
+
+Environments: ✅ Production ✅ Preview ✅ Development
+
+
+VARIABLE 2 of 5
+---------------
+Name: NEXT_PUBLIC_SANITY_DATASET
+Value: production
+
+Environments: ✅ Production ✅ Preview ✅ Development
+
+
+VARIABLE 3 of 5
+---------------
+Name: NEXT_PUBLIC_SANITY_API_VERSION
+Value: 2024-05-01
+
+Environments: ✅ Production ✅ Preview ✅ Development
+
+
+VARIABLE 4 of 5
+---------------
+Name: NEXT_PUBLIC_SANITY_REGISTRATION_DATASET
+Value: registration
+
+Environments: ✅ Production ✅ Preview ✅ Development
+
+
+VARIABLE 5 of 5
+---------------
+Name: SANITY_API_TOKEN
+Value: skDbiVIc3SNmcvy6eISu5JGD74d26cp3ce11YjUmWtabv7OmMe8BAnWVroiLJw0cbek33DdOZsvOxcAGGL0rMpeiNg2ehZbICqPRaHwIAq5rYUyjv2oap1wa7ioCkcgQZKhcesBcROdidwxc0Hb1fxlQSWjkPlS8DOYRJiEwp17PNtYAVhd0
+
+Environments: ✅ Production ✅ Preview ✅ Development
+
+
+========================================
+
+UNTUK COPY-PASTE CEPAT (jika Vercel mendukung bulk import):
+========================================
+
+NEXT_PUBLIC_SANITY_PROJECT_ID=2h29rrzh
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=2024-05-01
+NEXT_PUBLIC_SANITY_REGISTRATION_DATASET=registration
+SANITY_API_TOKEN=skDbiVIc3SNmcvy6eISu5JGD74d26cp3ce11YjUmWtabv7OmMe8BAnWVroiLJw0cbek33DdOZsvOxcAGGL0rMpeiNg2ehZbICqPRaHwIAq5rYUyjv2oap1wa7ioCkcgQZKhcesBcROdidwxc0Hb1fxlQSWjkPlS8DOYRJiEwp17PNtYAVhd0
+
+========================================
+
+CHECKLIST:
+----------
+Setup environment variables di Vercel:
+□ NEXT_PUBLIC_SANITY_PROJECT_ID (value: 2h29rrzh)
+□ NEXT_PUBLIC_SANITY_DATASET (value: production)
+□ NEXT_PUBLIC_SANITY_API_VERSION (value: 2024-05-01)
+□ NEXT_PUBLIC_SANITY_REGISTRATION_DATASET (value: registration)
+□ SANITY_API_TOKEN (value: sk...)
+
+Setiap variable harus diset untuk:
+□ Production environment
+□ Preview environment
+□ Development environment
+
+Setelah semua set:
+□ Go to Deployments tab
+□ Klik ... (menu) pada deployment terakhir
+□ Klik "Redeploy"
+□ CENTANG "Clear cache and redeploy"
+□ Klik "Redeploy"
+□ Tunggu build selesai
+□ Test website & /studio
+
+========================================
+
+PENTING:
+- SEMUA 5 variables HARUS di-set
+- HARUS centang Production, Preview, DAN Development
+- HARUS redeploy dengan "Clear cache"
+- Token jangan dibagikan ke orang lain
+
+========================================
