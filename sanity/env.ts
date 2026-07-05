@@ -20,7 +20,7 @@ function assertValue<T>(v: T | undefined, errorMessage: string): T {
   if (v === undefined) {
     console.warn(errorMessage)
     // Return dummy value to allow build to pass during UI development
-    return 'dummy-value' as any
+    return 'dummy-value' as unknown as T
   }
   return v
 }

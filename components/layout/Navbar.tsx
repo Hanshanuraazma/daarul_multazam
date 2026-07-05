@@ -1,87 +1,102 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { ChevronRight, Menu, X } from 'lucide-react'
+import { useState } from 'react'
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Tentang', href: '#tentang' },
-    { name: 'Program', href: '#program' },
-    { name: 'Keunggulan', href: '#keunggulan' },
-    { name: 'Galeri', href: '#galeri' },
-    { name: 'Pendaftaran', href: '#pendaftaran' },
-    { name: 'Kontak', href: '#kontak' },
-  ]
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+    <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center gap-2">
-              {/* Placeholder for Logo */}
-              <div className="w-10 h-10 bg-emerald-800 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">D</span>
-              </div>
-              <span className="font-bold text-xl text-emerald-900">Daarul Multazam</span>
-            </Link>
-          </div>
           
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href}
-                className="text-gray-700 hover:text-emerald-700 font-medium transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Link 
-              href="#pendaftaran"
-              className="bg-emerald-800 hover:bg-emerald-900 text-white px-6 py-2.5 rounded-full font-semibold transition-all hover:shadow-lg"
-            >
-              Daftar Sekarang &rsaquo;
+          {/* Logo */}
+          <Link href="/" className="flex-shrink-0 flex items-center gap-2 group">
+            <div className="w-10 h-10 bg-emerald-800 rounded-full flex items-center justify-center transition-transform group-hover:scale-105">
+              <span className="text-white font-bold text-xl">D</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="font-bold text-lg text-emerald-900 leading-none">Daarul Multazam</span>
+            </div>
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex space-x-8 items-center">
+            <Link href="/" className="text-gray-900 font-semibold hover:text-emerald-700 transition-colors text-sm">
+              Home
+            </Link>
+            <Link href="#tentang" className="text-gray-600 font-medium hover:text-emerald-700 transition-colors text-sm">
+              Tentang
+            </Link>
+            <Link href="#program" className="text-gray-600 font-medium hover:text-emerald-700 transition-colors text-sm">
+              Program
+            </Link>
+            <Link href="#keunggulan" className="text-gray-600 font-medium hover:text-emerald-700 transition-colors text-sm">
+              Keunggulan
+            </Link>
+            <Link href="#galeri" className="text-gray-600 font-medium hover:text-emerald-700 transition-colors text-sm">
+              Galeri
+            </Link>
+            <Link href="#pendaftaran" className="text-gray-600 font-medium hover:text-emerald-700 transition-colors text-sm">
+              Pendaftaran
             </Link>
           </div>
 
-          <div className="md:hidden flex items-center">
+          {/* CTA Button */}
+          <div className="hidden lg:flex">
+            <Link 
+              href="#pendaftaran" 
+              className="inline-flex items-center gap-2 bg-[#0F3D2E] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-[#0a2e22] transition-colors shadow-md shadow-[#0F3D2E]/20 text-sm"
+            >
+              Daftar Sekarang
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden flex items-center">
             <button 
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-emerald-700"
+              className="text-gray-600 hover:text-gray-900 focus:outline-none p-2 bg-gray-50 rounded-md"
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
+          
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t">
-          <div className="px-4 pt-2 pb-6 space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-emerald-700 hover:bg-emerald-50"
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Link 
-              href="#pendaftaran"
-              onClick={() => setIsOpen(false)}
-              className="block w-full text-center mt-4 bg-emerald-800 text-white px-5 py-3 rounded-md font-semibold"
-            >
-              Daftar Sekarang &rsaquo;
-            </Link>
-          </div>
+        <div className="lg:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-100 shadow-xl px-4 pt-2 pb-6 flex flex-col space-y-4">
+          <Link href="/" onClick={() => setIsOpen(false)} className="text-gray-900 font-semibold hover:text-emerald-700 transition-colors text-base px-2 py-1">
+            Home
+          </Link>
+          <Link href="#tentang" onClick={() => setIsOpen(false)} className="text-gray-600 font-medium hover:text-emerald-700 transition-colors text-base px-2 py-1">
+            Tentang
+          </Link>
+          <Link href="#program" onClick={() => setIsOpen(false)} className="text-gray-600 font-medium hover:text-emerald-700 transition-colors text-base px-2 py-1">
+            Program
+          </Link>
+          <Link href="#keunggulan" onClick={() => setIsOpen(false)} className="text-gray-600 font-medium hover:text-emerald-700 transition-colors text-base px-2 py-1">
+            Keunggulan
+          </Link>
+          <Link href="#galeri" onClick={() => setIsOpen(false)} className="text-gray-600 font-medium hover:text-emerald-700 transition-colors text-base px-2 py-1">
+            Galeri
+          </Link>
+          <Link href="#pendaftaran" onClick={() => setIsOpen(false)} className="text-gray-600 font-medium hover:text-emerald-700 transition-colors text-base px-2 py-1">
+            Pendaftaran
+          </Link>
+          <Link 
+            href="#pendaftaran" 
+            onClick={() => setIsOpen(false)}
+            className="inline-flex items-center justify-center gap-2 bg-[#0F3D2E] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#0a2e22] transition-colors mt-4"
+          >
+            Daftar Sekarang
+            <ChevronRight className="w-4 h-4" />
+          </Link>
         </div>
       )}
     </nav>
