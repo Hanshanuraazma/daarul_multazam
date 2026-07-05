@@ -12,8 +12,8 @@ export const projectId = assertValue(
 )
 
 export const registrationDataset = assertValue(
-  process.env.SANITY_REGISTRATION_DATASET,
-  'Missing environment variable: SANITY_REGISTRATION_DATASET'
+  process.env.NEXT_PUBLIC_SANITY_REGISTRATION_DATASET || process.env.SANITY_REGISTRATION_DATASET,
+  'Missing environment variable: NEXT_PUBLIC_SANITY_REGISTRATION_DATASET'
 )
 
 function assertValue<T>(v: T | undefined, errorMessage: string): T {
